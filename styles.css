@@ -1,13 +1,14 @@
 body {
   text-align: center;
-  background-color: #283149;
+  background-color: #929ab1;
 }
 
 h1 {
   font-size: 5rem;
   color: #dbedf3;
-  font-family: "Arvo", cursive;
+  font-family: "Courier New", Courier, monospace;
   text-shadow: 3px 0 #da0463;
+  text-decoration: underline;
 }
 
 footer {
