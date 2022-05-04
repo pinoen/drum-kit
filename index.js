@@ -4,12 +4,14 @@ buttons.forEach((btn) => {
   btn.addEventListener("click", () => {
     let letterFromClick = btn.textContent;
     makeSound(letterFromClick);
+    makeAnimation(letterFromClick);
   });
 });
 
 document.body.addEventListener("keydown", (e) => {
   let letterFromKeyboard = e.key;
   makeSound(letterFromKeyboard);
+  makeAnimation(letterFromKeyboard);
 });
 
 function makeSound(letter) {
@@ -46,4 +48,12 @@ function makeSound(letter) {
     default:
       console.log(letter);
   }
+}
+
+function makeAnimation(letter) {
+  let keyPressed = document.querySelector(`.${letter}`);
+  keyPressed.classList.add("pressed");
+  setTimeout(() => {
+    keyPressed.classList.remove("pressed");
+  }, 100);
 }
